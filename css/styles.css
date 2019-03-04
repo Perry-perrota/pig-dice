@@ -1,0 +1,15 @@
+.player1{
+  float: left;
+}
+.player2{
+float: right;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+.jumbotron{
+  }
+h4{
+  margin-top: 10px;
+}

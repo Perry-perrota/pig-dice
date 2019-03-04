@@ -1,8 +1,53 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<<head>
-  <<title>Gaming</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+<head>
+  <title>Gaming</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
 </head>
+<body class="container">
+  <div class="jumbotron">
+    <H4>PIG DICE</H4>
+    <h6>Rules</h6>
+    <ol>
+      <li>Select a gameplay type.</li>
+      <li>Tap the roll dice button once its your turn</li>
+    </ol>
+    <h6>Help</h6>
+    <p>The game is played as follows</p>
+    <ul>
+      <li>A user clicks roll the dice once its their turn.</li>
+      <li>A score of 1 makes the user get a score of 0 and turn is passed over to player 2</li>
+      <li>A score of 2-6(2,3,4,5,6) adds the value to the current score of the player</li>
+      <li>A user can choose to hold their score by passing the turn to the next player</li>
+      <li>If the player choses to continue playing their turn, a score of 1 will nullify their score and pass the turn to the other player</li>
+    </div>
+    <div class="well">
+      <p>Please select a game mode to play in</p>
+      <ul>
+        <li>Computer</li>
+        <li>2 players</li>
+      </div>
+      <div class="container">
+        <div class="player1">
+          <img class="player1" src="images/playstation.png" alt="player1 icon">
+        </div>
+        <div class="player2">
+          <img class="player2" src="images/playstation.png" alt="player1 icon">
+        </div>
+        <div class="turns">
+          <form class="gamecheck">
+            <input name="HOLD" type="button" value="hold">
+            <input name="ROLL" type="button" value="roll">
+            <input name="RESET" type="button" value="restart">
+          </form>
+        </div>
+        <div class="name-show">
+          <p id="player1"></p>
+          <p id="player2"></p>
+        </div>
+      </div>
+    </body>
+
+    </html>
