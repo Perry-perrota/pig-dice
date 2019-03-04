@@ -10,6 +10,15 @@ img{
 }
 .jumbotron{
   }
-h4{
-  margin-top: 10px;
+h6{  
+  cursor: pointer;
+}
+.viewhelp{
+  display: none;
+}
+.viewrules{
+  display: none;
+}
+h5{
+cursor: pointer;
 }
