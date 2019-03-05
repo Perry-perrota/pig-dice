@@ -4,9 +4,9 @@ $(document).ready(function() {
     $(".viewrules").show('slow');
   });
 });
-function ranNum(){
-  var rollval = Math.floor((Math.random() * 6) + 1);
-  alert(rollval);
+function ranNum(){  
+  var rollVal=(Math.ceil(Math.random() * 6));
+  checkValue();
 }
 
 //check for the value if it meets the rules criteria
