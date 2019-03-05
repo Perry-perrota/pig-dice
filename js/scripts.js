@@ -14,10 +14,16 @@ function checkValue(){
   if(rollval===1){
     total+=0;
   }
-  else(random>==1 &&random<==6>){
+  else(random>==1 &&random<==6){
     total+=rollval;
     console.log("dice roll:" + random)
 
   }
+  if(total>==100){
+    console.log("Youre the winner with" + total )
 
-};
+  }
+  else{
+    ranNum();
+
+}
