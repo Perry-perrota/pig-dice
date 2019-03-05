@@ -13,5 +13,12 @@ This project allows a user to play a game which allows a user to roll a dice and
 * If the player choses to continue playing their turn, a score of 1 will nullify their score and pass the turn to the other player
 * A winner is selected after getting 100 points or a value that is greater than that.
 
-####
+| Action       | Result       | Effect  |
+| ------------- |:-------------:| -----:|
+| Click on roll      | display random number between 1 and 6 | Add that number to the turn total |
+| Click on hold      | Adds the round total to the overall score      |   The turn goes to the other player |
+| When a player's overall score is equal to or greater than the winning score (default is 100) | The player wins | game ends |
+
+#### Bugs
+The program did not have any known bugs at the time of deployment
 ####
