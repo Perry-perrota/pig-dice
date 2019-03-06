@@ -4,7 +4,12 @@ $(document).ready(function() {
     $(".viewrules").show('slow');
   });
 });
+var rollval;
+var total=0;
+var ranNum=();
+var checkValue=();
 function ranNum () {
+  
   var rollVal=(Math.ceil(Math.rollVal() * 6));
   checkValue();
 }
