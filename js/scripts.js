@@ -3,74 +3,61 @@ $(document).ready(function() {
     $("h6").hide('slow')
     $(".viewrules").show('slow');
   });
-  });
+});
+function ranNum () {
+  var rollVal=(Math.ceil(Math.rollVal() * 6));
+  checkValue();
+}
 $(document).ready(function() {
-$(".roll").click(function() {
-  function ranNum(){
-    var rollVal=(Math.ceil(Math.rollVal() * 6));
-    checkValue();
-  }
+  $(".roll").click(function() {
+    function ranNum () {
+      var rollVal=(Math.ceil(Math.rollVal() * 6));
+      checkValue();
+    }
+  });
 });
-});
+function ranNum () {
+  var rollVal=(Math.ceil(Math.rollVal() * 6));
+  checkValue();
+}
 function checkValue(){
   if(rollval===1){
     total+=0;
     nextplay();
-      }
-  else(rollVal>==1 && rollVal<==6){
+  }
+  else(rollVal>==2 && rollVal<==6){
     total+=rollval;
     //  To be outputted to the html document
-    console.log("dice roll:" + rollVal)
+    document.getElementById('#player1').innerHTML = rollval;
     ranNum();
-
   }
   if(total>==100){
     //  To be outputted to the html document
-    console.log("Youre the winner with" + total )
+    document.getElementById("#win1").innerHTML = "You win";
   }
   else{
     ranNum();
+  }
 }
 
-function nextplay(){
-  ranNum();
-  if(rollval===1){
-    total+=0;
-    nextplay();
-      }
-  else(rollVal>==1 &&rollVal<==6){
-    total+=rollval;
-    //  To be outputted to the html document
-    console.log("dice roll:" + rollVal)
+  function nextplay(){
     ranNum();
-
-  }
-  if(total>==100){
-    console.log("Youre the winner with" + total )
-
-  }
-  else{
-    ranNum();
-
-}
-ranNum();
-if(rollval===1){
-  total+=0;
-  nextplay();
+    if(rollval===1){
+      total+=0;
+      nextplay();
+      document.getElementById('#player2').innerHTML = rollval;
     }
-else(rollVal>==1 &&ra<==6){
-  total+=rollval;
-  console.log("dice roll:" + rollVal)
-  // to be outputted to the html document
-    console.log("" + total)
-  ranNum();
-}
-if(total>==100){
-  console.log("Youre the winner with" + total )
+    else(rollVal>==1 &&rollVal<==6){
+      total+=rollval;
+      //  To be outputted to the html document
+      document.getElementById('#player2').innerHTML = rollval;
+      ranNum();
+    }
+    if(total>==100){
+    document.getElementById('#win2').innerHTML ="You win";
 
-}
-else{
-  ranNum();
-
-}
-}
+    }
+    else{
+      ranNum();
+    }
+    }
