@@ -1,16 +1,23 @@
 .player1{
   float: left;
+  background-color: grey;
+  padding: 50px;
+  margin-right: 40px;
 }
 .player2{
 float: right;
+background-color: yellow;
+padding: 50px;
+margin-left: 20px;
 }
 img{
   width: 200px;
   height: 200px;
 }
 .jumbotron{
+  padding-left: 100px;
   }
-h6{  
+h6{
   cursor: pointer;
 }
 .viewhelp{
@@ -21,4 +28,11 @@ h6{
 }
 h5{
 cursor: pointer;
+}
+li{
+  list-style-type: none;
+}
+form{
+margin: 30px;
+padding: 30px;
 }
