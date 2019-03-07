@@ -1,68 +1,51 @@
-$(document).ready(function() {
-  $("h6").click(function() {
-    $("h6").hide('slow')
-    $(".viewrules").show('slow');
-  });
-});
-var rollval;
-var total=0;
-var ranNum=();
-var checkValue=();
-function ranNum () {
-  
-  var rollVal=(Math.ceil(Math.rollVal() * 6));
-  checkValue();
-}
-$(document).ready(function() {
-  $(".roll").click(function() {
-    function ranNum () {
-      var rollVal=(Math.ceil(Math.rollVal() * 6));
-      checkValue();
-    }
-  });
-});
-function ranNum () {
-  var rollVal=(Math.ceil(Math.rollVal() * 6));
-  checkValue();
-}
-function checkValue(){
-  if(rollval===1){
-    total+=0;
-    nextplay();
-  }
-  else(rollVal>==2 && rollVal<==6){
-    total+=rollval;
-    //  To be outputted to the html document
-    document.getElementById('#player1').innerHTML = rollval;
-    ranNum();
-  }
-  if(total>==100){
-    //  To be outputted to the html document
-    document.getElementById("#win1").innerHTML = "You win";
-  }
-  else{
-    ranNum();
-  }
-}
+var Rounds = function() {
+  this.roll = 0;
+  this.turnscore = 0;
+  this.totalscore = 0;
+};
 
-  function nextplay(){
-    ranNum();
-    if(rollval===1){
-      total+=0;
-      nextplay();
-      document.getElementById('#player2').innerHTML = rollval;
-    }
-    else(rollVal>==1 &&rollVal<==6){
-      total+=rollval;
-      //  To be outputted to the html document
-      document.getElementById('#player2').innerHTML = rollval;
-      ranNum();
-    }
-    if(total>==100){
-    document.getElementById('#win2').innerHTML ="You win";
+var rollval = function() {
+  return Math.round(5 * Math.random()) + 1;
+};
 
-    }
-    else{
-      ranNum();
-    }
-    }
+Rounds.prototype.roll = function() {
+  if (this.rollval=== 1) {
+    this.turnscore = 0;
+      $(document).getElementById('display')="Sorry you rolled a 1. Your turn score is zero";
+      $(document).getElementById('score')= score;
+  } else {
+    this.turnscore += this.rollval;
+  }
+};
+Rounds.prototype.hold = function() {
+  this.totalscore += this.turnscore;
+  this.turnscore = 0;
+    $(document).getElementById('display')="Its the next player's turn!";
+    $(document).getElementById('score')= score;
+};
+Rounds.prototype.checkForWinner = function() {
+  if (this.totalscore > 99) {
+    $(document).getElementById('display')="Congratulations You have won the game";
+  }
+};
+
+$("button#roll1").click(function(event) {
+  event.preventDefault();
+  Rounds.prototype.roll();
+
+});
+$("button#roll2").click(function(event) {
+  event.preventDefault();
+    Rounds.prototype.hold();
+
+});
+$("button#hold1").click(function(event) {
+  event.preventDefault();
+    Rounds.prototype.roll();
+
+});
+$("button#hold2").click(function(event) {
+  event.preventDefault();
+    Rounds.prototype.hold();
+
+});
